@@ -7,56 +7,27 @@ icon: glyphicon-heart
 
 ### 关于我
 
-> 2015年我将步入找工作的大潮，希望做一个前端开发工程师。   
+> 从接触前端开始就非常热爱前端，立志成为一名优秀的前端工程师。   
 
-在校硕士研究生一枚，就读于西安交通大学软件工程专业，2016年毕业。   
+目前就读于四川大学软件学院软件工程专业，平时喜欢看看书、看看剧、打打羽毛球，如果在家的话，还喜欢做做菜。
 
-主要兴趣集中在前端开发，大前端的概念深入我心。将更多的业务逻辑放在前端中，这很有趣。同时，将自己构想的内容实现出来，这种感觉很愉快。   
+不过我最喜欢的还是敲前端的代码，真正接触前端还是在大三开学的实训中，这种即写即得的感觉让我一下子对前端有了浓厚兴趣，之后我又阅读了很多这方面的书籍，开始变得对前端欲罢不能。
 
-热爱美好的事物，热爱摇滚乐，组过乐队，卖过唱。
+在我看来，前端开发是一个需要细心耐心的工作，而恰好，我很符合这方面要求。再者，前端的水是越来越深，可能一个刚接触前端的人会大呼前端太容易，可我知道，随着越发深入的学习，前端便不会如想象中的那么简单，而我，喜欢学习新的知识，新的技术，在吸取新兴事物的同时，我会觉得我自己也在不断进步，这样的进步，让我觉得生活充满了阳光。
 
-很喜欢崔健的歌词：现实像块石头，精神像个蛋，石头虽然坚硬，可蛋里才是生命。   
+虽然现在我并不是一名合格的前端工程师，但我相信，凭借我对前端的热爱和我自己不懈的努力，以及想要成为优秀前端工程师的强大信念，我会一定可以的！
 
-还有，学习是一个非常愉快的过程。共同加油！   
+所以，大家要一起努力呀~~  
 
 ---
 
 ### 联系我
 
-* email：[gaohaoyang126@126.com](mailto:{{ site.email }})
-* QQ：793940046
-* Weibo：[Haoyang](http://weibo.com/3115521wh)
-* 知乎：[Gaohaoyang](http://www.zhihu.com/people/gaohaoyang)
-* 豆瓣：[Gaohaoyang](http://www.douban.com/people/42525035/)
-* 豆瓣音乐人：[浩阳的小站](http://site.douban.com/haoyangaiyinyue/)
-
+* email：[412000861@qq.com](mailto:{{ site.email }})
 ---
 
 ### 关于本站   
 
-这个博客主要用于记录一下前端路上的风景。
+这个博客是我根据网上的教程搭建的，页面是用的一位大神的模板（康撒阿米达^-^）
 
-2015.5.25 | 修复了底栏上跳的bug，调整了demo页面响应式变化的效果。
-2015.4.24 | 目前我在学习百度前端技术学院的任务，学的过程中感觉自己之前搭建博客的代码写的太烂太乱了。学完之后一定会全部重构一下的。不再使用 BootStrap 了，自己写一些响应式的布局，自己模块化构建 js 代码，争取在7月之前完成。
-2015.4.14  |  给博客添加了侧边的目录。主要使用了 BootStrap 的 [Affix](http://v3.bootcss.com/javascript/#affix) 插件。后来又弃用了这个插件，有bug。
-2015.4.8      |  本博客迎来第一条评论！在文章 [判断两个数组是否相似 (arraysSimilar)](http://gaohaoyang.github.io/2015/04/06/arrays-similar/) 下，来自慕课网的老师 [Bosn](http://www.imooc.com/space/teacher/id/1159332) 说虽然代码长了些，但思路清晰。同时博客添加了返回顶部按钮。
-2015.3	       |  增加了底栏的自适应内容高度的效果。不会因为页面内容太少而紧挨着内容。首页添加了文章分类切换的动画。使用 [HighLightJS](https://highlightjs.org/) 进行代码高亮，放弃了 jekyll 推荐的 pygments，HighLightJS 配合 MarkDown 书写太方便了，直接缩进一下就被解释为代码了。
-2015.2	       |  给分页列表加 css3 的阴影效果，事先有一个相关的 [阴影demo](http://gaohaoyang.github.io/shadow-demo-css3/) 练习，这里感谢慕课网 [CSS3图片阴影效果](http://www.imooc.com/learn/240) 的课程。
-2015.1	       |  尝试修改博客界面，使用 [BootStrap](http://getbootstrap.com/) 布局，增加主页右侧的分类列表。
-2014.12	       |  初步使用 jekyll 搭建好静态博客。但是界面使用的默认的，还没有修改。详情可以日志 [Jekyll 搭建静态博客](http://gaohaoyang.github.io/2015/02/15/create-my-blog-with-jekyll/)，最后有原始的界面截图。
-2014.11         |  学习 Git 的时候接触到 GitHub 从而了解了 [GitHub Pages](http://pages.github.com/) 于是尝试自己用 jekyll 建一个博客。   
-2014.5          |  尝试过使用 WordPress 在京东云擎上建站，当时建好后比较卡，不了了之了。
-
-通过搭建这个静态博客，学到最多的就是 Git 的语法了，现在对 Git 的操作越来越熟练了。  
-
----
-
-#### 友情链接
-
-[羡辙杂俎](http://zhangwenli.com/blog) \| [Anotherhome](https://www.anotherhome.net) \| [Reverland](http://reverland.org/) \| [ZhiLi](http://lizhipower.github.io/) \| [Simmer](http://simmer-jun.github.io/) \| [awthink](http://awthink.net/) \| [Aralic](http://aralic.github.io/)
-
-Comment below to exchange link with me.  
-
----
-
-只要有空一定会更新的！
+我会在这里记录我的前端学习之路，fighting！
