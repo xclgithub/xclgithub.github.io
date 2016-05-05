@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>掉表情game</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	*{margin:0;padding:0;}
+	body{background:#9AFF9A;}
+	#container{width:700px;margin:0 auto;position:relative;}
+	#container h3{width:300px;height:30px;margin:0 auto;line-height:30px;}
+	#text{width:700px;margin:0 auto;}
+	#container button{width:70px;margin-left:230px;}
+	#container #box{width:500px;height:400px;background:#fff;margin-top:20px;position:relative;border:1px solid #000;overflow:hidden;}
+	#container #points{width:100px;height:40px;position:absolute;left:-101px;top:127px;background:#FFE4C4;border-left:1px solid #000;border-bottom:1px solid #000;border-top:1px solid #000;font-size:17px;}
+	</style>
+
+	<script type="text/javascript">
+	window.onload=function(){
+		var arr=["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png"];
+		var container=document.getElementById("container");
+		var button=container.getElementsByTagName("button")[0];
+		var box=document.getElementById("box");
+		var points=document.getElementById("points");
+		var spans=points.getElementsByTagName("span");
+
+		button.onclick=function(){
+			clearInterval(button.timer);
+			var lPoints=0;
+			var gPoints=0;
+			img();
+			button.timer=setInterval(img,4000);
+
+			function img(){
+				var img=document.createElement("IMG");
+				box.appendChild(img);
+				img.src=arr[Math.floor((Math.random()*9))];
+				img.style.position="absolute";
+				img.style.left=Math.random()*470+"px";
+				img.style.top=0;
+				doMove(img,"top",10,400,losePoints);
+			}
+
+			function getStyle(obj,attr){
+				return obj.currentStyle?obj.currentStyle[attr]:
+				getComputedStyle(obj)[attr];
+			}
+
+			function losePoints(){
+				lPoints++;
+				spans[1].innerHTML=lPoints;
+				if(lPoints==5){
+					clearInterval(button.timer);
+					alert("你太慢了，游戏结束啦！");
+					}
+			}
+
+			function getPoints(){
+				gPoints++;
+				spans[0].innerHTML=gPoints;
+				if(gPoints==10){
+					clearInterval(button.timer);
+					alert("你赢了，祝贺你，键盘小能手！");
+				}
+			}
+
+			function doMove(obj,attr,offset,target,endFn){
+				clearInterval(obj.moveTimer);
+				var current=parseInt(getStyle(obj,attr));
+				offset=current>target?-offset:offset;
+				var i=1;
+				var j=2;
+
+				obj.moveTimer=setInterval(function(){
+					i+=3;
+					j+=3;
+					current+=offset;
+
+				if(current>target&&offset>0||current<target&&offset<0){
+					current=target;
+				}
+
+				obj.onclick=function(){
+					clearInterval(obj.moveTimer);
+					obj.src="qq.png";
+					shake(obj,"left",getPoints);
+				}
+
+				obj.style[attr]=current+"px";
+				if(current==target){
+					clearInterval(obj.moveTimer);
+					endFn&&endFn();
+				}
+						
+				},Math.ceil(150/(Math.random()*(j-i)+i)));
+			}
+
+			function shake(obj,attr,endFn){
+			clearInterval(obj.shakeTimer);
+
+			var arr=[];
+			var num=0;
+			for(var i=20;i>0;i-=2){
+				arr.push(i,-i);
+			}
+			arr.push(0);
+
+			obj.shakeTimer=setInterval(function(){
+				var current=parseInt(getStyle(obj,attr));
+				current+=arr[num];
+				num++;
+				if(num==arr.length){
+					clearInterval(obj.shakeTimer);
+					obj.style.visibility="hidden";
+					endFn&&endFn();
+				}
+				obj.style[attr]=current+"px";
+				},30);	
+			}	
+
+		}
+
+	}
+	</script>
+
+</head>
+<body>
+<div id="container">
+	<h3>你的鼠标有多快</h3><br/>
+	<div id="text">游戏说明：点击开始游戏，随机掉下QQ表情，点中它千万不要让它掉下去！！</div><br/>
+	<button>开始游戏</button><br/>
+	<div id="box"></div>
+	<div id="points">
+			得分：<span>0</span><br/>
+			失分：<span>0</span>
+	</div>
+
+</div>
+</body>
+</html>
