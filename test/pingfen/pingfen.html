@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>百度文库评分</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+	#list{width:500px;margin:0 auto;}
+	#list i{width:50px;height:50px;background:#FFE4B5;border:1px solid #000;margin-left:10px;cursor:pointer;}
+	#list h3{display:inline;}
+	#list span{font-size:13px;color:#C1C1C1;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var list=document.getElementById("list");
+			var is=list.getElementsByTagName("i");
+			var arr=["很差","较差","还行","推荐","力荐"];
+			var span=list.getElementsByTagName("span")[0];
+
+			for(var i=0;i<is.length;i++){
+				is[i].index=i;
+				is[i].onmouseover=function(){
+					this.style.background="#FFFF00";
+					span.innerHTML=arr[this.index];
+					for(var j=0;j<this.index;j++){
+						is[j].style.background="#FFFF00";
+					}
+					for(var k=this.index+1;k<is.length;k++){
+						is[k].style.background="#FFE4B5";
+					}
+				}
+				is[i].onmouseout=function(){
+					this.style.background="#FFE4B5";
+					span.innerHTML="小提示：点击就可以评分";
+					for(var j=0;j<this.index;j++){
+						is[j].style.background="#FFE4B5";
+					}
+				}
+			}
+
+		}
+	</script>
+</head>
+<body>
+<div id="list">
+	<h3>总体评价:</h3>
+	<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+	<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+	<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+	<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+	<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+	<span>小提示：点击就可以评分</span>
+</div>
+</body>
+</html>
