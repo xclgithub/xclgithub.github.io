@@ -23,7 +23,7 @@ icon: glyphicon-heart
 
 ### 联系我
 
-* email：[412000861@qq.com](mailto:{{ site.email }})
+* email：[scuxq@foxmail.com](mailto:{{ site.email }})
 ---
 
 ### 关于本站   
