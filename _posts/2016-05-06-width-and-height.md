@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  some kinds of width and height
+title: "some kinds of width and height"
 date:   2016-05-6 10:14:54
 categories: JavaScript
 excerpt: 学习笔记
@@ -79,4 +79,3 @@ screenX和screenY是事件发生时鼠标相对于屏幕的坐标，以设备屏
 
 该属性是事件发生时鼠标点击位置相对于页面的位置，通常浏览器窗口没有出现滚动条时，该属性和event.clientX及event.clientY是等价的，但是当浏览器出现滚动条的时候，pageX通常会大于clientX，因为页面还存在被卷起来的部分的宽度和高度。
 
----
