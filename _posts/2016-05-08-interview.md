@@ -2,7 +2,7 @@
 layout: post
 title:  "interview"
 date:   2016-05-08 21:05:12
-categories: JavaScript
+categories: JavaS
 excerpt: 面试
 
 ---
