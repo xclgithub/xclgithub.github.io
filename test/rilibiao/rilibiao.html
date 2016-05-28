@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>日期组件</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		table{font-size:12px;}
+		tr{background:yellow;}
+		.currentDay{color:red;border:solid 1pt;}
+		.odd{background:lightgray;}
+		.headercells{background:gray;}
+		.sunday{background:cyan;}
+	</style>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		var currentDay;
+		var currentMonth;
+		var currentYear;
+		var startMonthDay;
+		function init(day){
+			var today;
+			if(day==null){
+				today = new Date();
+			}else{
+				today = day;
+			}
+			currentDay = today.getDate();
+			currentMonth = today.getMonth();
+			currentYear = today.getFullYear();
+			var startMonth = new Date(currentYear,currentMonth,1);
+			startMonthDay = startMonth.getDay();
+			if(startMonthDay == 0){
+				startMonthDay = 7;
+			} 
+		}
+		function row(){
+			var z = $("<tr></tr>");
+			for(var i=0;i<7;i++){
+				if(i==6){
+					z.append($("<td></td>").addClass("sunday"));
+				}else{
+					z.append($("<td></td>"));
+				}
+			}
+			return z;
+		}
+		function days(startMonthDay){
+			for(var i=0;i<42;i++){
+				$("td").eq(i).append(new Date(currentYear,currentMonth,i-startMonthDay+2).getDate());
+			}
+		}
+		$(document).ready(function(){
+			init(new Date());
+			$("table").append($("<tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>"));
+			for(var j=0;j<6;j++){
+				$("table").append(row());
+			}
+			days(startMonthDay);
+			$("th").addClass("headercells");
+			$("tr:odd").addClass("odd");
+			$("td").slice(0,startMonthDay-1).css({
+				opacity:"0.3"
+			});
+			for(var i=28;i<42;i++){
+				if($("td").eq(i).html()<15){
+					$("td").eq(i).css({
+						opacity:"0.3"
+					});
+				}
+			}
+			$("td").eq(currentDay+startMonthDay-2).addClass("currentDay");
+			$("div:first").append((currentMonth+1)+"/"+currentYear);
+		});
+	</script>
+</head>
+<body>
+	<h1>RJS Date Componet1.0</h1>
+	<div></div>
+	<table></table>
+</body>
+</html>
